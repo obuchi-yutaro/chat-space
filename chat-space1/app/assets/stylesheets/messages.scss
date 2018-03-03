@@ -1,23 +1,89 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-// $sidebar: 300px;
 
+
+
+//index.html 
 .contents.row{
   .contents{
     display: flex;
-    .center{
+    .main{
       height: 100px;
-      background-color: yellow;
+      // background-color:#AAAAAA;
       height:100vh;
       width: calc(100vw - 300px);
       min-width: 500px;
       .top_contents{
         height:96px;
-        background-color:blue;
+        background-color:white;
+        border-bottom: solid;
+        border-color: #eeeeee;
+        border-width: 1px;
+        display: flex;
+        flex-direction: row-reverse;
+        .edit_box{
+          height:40px;
+          width:70px;
+          position:relative;
+          top: 28px;
+          right: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border:solid;
+          border-width: 2px;
+          border-color: #38AEF0;
+            .edit{
+              color:#38AEF0;
+            }
+        }
       }
+      .center_contents{
+        width: calc(100vw - 300px);
+        height: calc(100vh - 186px);
+        background-color:white;
+      }
+
       .bottom_contents{
-        width: calc(200vh );
+        width: calc(100vw - 300px);
+        height: 90px;
+        background-color:#AAAAAA;
+        display: flex;
+
+        .bottom_contents_message{
+          height:50px;
+          width: calc(100vw - 515px);
+          background-color:white;
+          position:relative;
+          top:20px;
+          left: 40px;
+          .type_a_message{
+            position:relative;
+            top:10px;
+            left:10px;
+            font-size: 16px;
+            color:#434A54;
+
+          }
+        }
+        .sent_button{
+          height:50px;
+          width:108px;
+          background-color:#38AEF0;
+          position:relative;
+          top:20px;
+          left:70px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .sent_box{
+            p{
+              color:white;
+              font-size: 115%;
+            }
+          }
+        }
       }
     }
   }
