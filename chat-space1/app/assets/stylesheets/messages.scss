@@ -49,38 +49,33 @@
         width: calc(100vw - 300px);
         height: 90px;
         background-color:#AAAAAA;
-        display: flex;
 
         .bottom_contents_message{
           height:50px;
-          width: calc(100vw - 515px);
-          background-color:white;
+          width: calc(100vw - 400px);
           position:relative;
           top:20px;
           left: 40px;
-          .type_a_message{
-            position:relative;
-            top:10px;
-            left:10px;
-            font-size: 16px;
-            color:#434A54;
 
-          }
-        }
-        .sent_button{
-          height:50px;
-          width:108px;
-          background-color:#38AEF0;
-          position:relative;
-          top:20px;
-          left:70px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          .sent_box{
-            p{
+          .new_message{
+            display: flex;
+
+            i{
+              position:relative;
+              right:28px;
+              top:20px;
+            }
+            textarea{
+              width: calc(100vw - 400px);
+              
+            }
+            button{
+              width:115px;
+              position:relative;
+              left:15px;
+              background-color:#38AEF0;
               color:white;
-              font-size: 115%;
+              font-size: 18px;
             }
           }
         }
