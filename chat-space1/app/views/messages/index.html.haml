@@ -8,7 +8,11 @@
       .center_contents
       .bottom_contents
         .bottom_contents_message
-          .type_a_message type a message
-        .sent_button
-          .sent_box
-            %p Send
+          .type_a_message
+            = form_for [@message] do |f|
+              .message_area
+                =f.text_area :text, placeholder: 'type_a_message'
+              .sent_button
+                .sent_box
+                  = button_tag type: "submit", class: "button_block" do
+                    Send
