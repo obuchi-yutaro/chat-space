@@ -1,3 +1,24 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// $sidebar: 300px;
+
+.contents.row{
+  .contents{
+    display: flex;
+    .center{
+      height: 100px;
+      background-color: yellow;
+      height:100vh;
+      width: calc(100vw - 300px);
+      min-width: 500px;
+      .top_contents{
+        height:96px;
+        background-color:blue;
+      }
+      .bottom_contents{
+        width: calc(200vh );
+      }
+    }
+  }
+}
