@@ -1,16 +1,16 @@
 class MessagesController < ApplicationController
 
   def index
-    @message = Message.new
+    @messages = Message.includes(:user).order('id DESC')
+    # @message = Message.new
   end
 
   def create
-    binding.pry
-    Message.create(create_params)
+    Message.create
   end
 
   private
-  def create_params
-    params.require(:message).permit(:text)
+  def message_params
+    params.permit(:text)
   end
 end

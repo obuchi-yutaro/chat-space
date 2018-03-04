@@ -7,5 +7,8 @@
         .font_awesome
           = fa_icon("edit")
           = fa_icon("cog")
-    .team_area
-      jiro
+    .box
+      - @messages.each do |message|
+        .comment_box
+          #{message.text}
+      

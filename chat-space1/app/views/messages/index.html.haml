@@ -1,6 +1,6 @@
 .contents.row
   .contents
-    = render partial: "sidebar"
+    = render partial: "sidebar", locals: { message: @message }
     .main
       .top_contents
         .edit_box
@@ -8,8 +8,6 @@
       .center_contents
       .bottom_contents
         .bottom_contents_message
-          = form_for [@message] do |f|
-            =f.text_area :text, placeholder: 'type a message'
-            = fa_icon("image")
-            = button_tag type: "submit", class: "button_block" do
-              Send
+          =form_tag("/messages", method: :post) do
+            %input{name: "text",type:"text", placeholder: "type a text"}
+            %input{type: "submit", value: "SENT"}/
