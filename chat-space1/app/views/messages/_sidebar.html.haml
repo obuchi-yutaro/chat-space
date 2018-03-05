@@ -3,8 +3,10 @@
     .user
       .user_information
         .user_name
-          taro
+          = current_user.nickname
         .font_awesome
-          = fa_icon("edit")
-          = fa_icon("cog")
+          = link_to edit_user_registration_path do
+            %i.fa.fa-edit
+          = link_to edit_user_registration_path do
+            %i.fa.fa-cog
       

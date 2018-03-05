@@ -8,13 +8,13 @@
       .center_contents
         .box
           - @messages.each do |message|
-            .comment_box
-              = message.user.nickname
-              = message.user.created_at.strftime("%Y-%m-%d %H:%M:%S")
-              %br/
-              #{message.text}
+            .total_box
+              .users_box
+                = message.user.nickname
+                %a= message.user.created_at.strftime("%Y-%m-%d %H:%M:%S")
+              %span.text #{message.text}
       .bottom_contents
         .bottom_contents_message
           =form_tag("/messages", method: :post) do
-            %input{name: "text",type:"text", placeholder: "type a text"}
-            %input{type: "submit", value: "SENT"}/
+            %input{name: "text",type:"text", placeholder: "type a message",class: "group1"}
+            %input{type: "submit", value: "Send", class: "group2"}/
