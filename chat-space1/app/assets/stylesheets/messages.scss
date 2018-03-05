@@ -43,44 +43,93 @@
         width: calc(100vw - 300px);
         height: calc(100vh - 186px);
         background-color:white;
+        .box{
+          width: calc(100vw - 300px);
+          height: calc(100vh - 186px);
+          background-color:white;
+          // background-attachment: fixed;
+          .total_box:first-child{
+            width: calc(100vw - 300px);
+            height:80px;
+            background-color:white;
+            position:relative;
+            top:46px;
+            .users_box{
+              width: calc(100vw - 340px);
+              position:relative;
+              left:40px;
+              font-size:16px;
+              font-weight: bold;
+              color:#434A55;
+              a{
+                font-weight:lighter;
+                font-size: 12px;
+                color:#CCCCCC;
+              }
+            }
+            .text{
+              background-color:white;
+              position:relative;
+              top:10px;
+              left:40px;
+              font-size:14px;
+            }
+          }
+          .total_box:not(:first-child){
+            height:80px;
+            width: calc(100vw - 300px);
+            background-color:white;
+            position:relative;
+            top:40px;
+            .users_box{
+              width: calc(100vw - 340px);
+              position:relative;
+              left:40px;
+              font-size:16px;
+              font-weight: bold;
+              color:#434A55;
+              a{
+                font-weight:lighter;
+                font-size: 12px;
+                color:#CCCCCC;
+              }
+            }
+            .text{
+              position:relative;
+              left:40px;
+              top:10px;
+              background-color:white;
+              font-size:14px;
+            }
+          }
+        }
       }
-
       .bottom_contents{
         width: calc(100vw - 300px);
         height: 90px;
         background-color:#AAAAAA;
-        display: flex;
 
         .bottom_contents_message{
           height:50px;
-          width: calc(100vw - 515px);
-          background-color:white;
+          width: calc(100vw - 400px);
           position:relative;
           top:20px;
           left: 40px;
-          .type_a_message{
-            position:relative;
-            top:10px;
-            left:10px;
-            font-size: 16px;
-            color:#434A54;
 
-          }
-        }
-        .sent_button{
-          height:50px;
-          width:108px;
-          background-color:#38AEF0;
-          position:relative;
-          top:20px;
-          left:70px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          .sent_box{
-            p{
+          form{
+            .group1{
+              width: calc(100vw - 550px);
+              height: 50px;
+              color:#38AEF0;
+            }
+            .group2{
+              height:50px;
+              width:110px;
+              position:relative;
+              left: 40px;
+              background-color:#38AEF0;
               color:white;
-              font-size: 115%;
+              border-style: none;
             }
           }
         }

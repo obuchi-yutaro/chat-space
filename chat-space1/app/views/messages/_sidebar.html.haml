@@ -1,6 +1,12 @@
 .sidebar
   .sidebar_contents
-    .user_name
-      taro
-    .team_area
-      jiro
+    .user
+      .user_information
+        .user_name
+          = current_user.nickname
+        .font_awesome
+          = link_to edit_user_registration_path do
+            %i.fa.fa-edit
+          = link_to edit_user_registration_path do
+            %i.fa.fa-cog
+      

@@ -1,14 +1,20 @@
 .contents.row
   .contents
-    = render partial: "sidebar"
+    = render partial: "sidebar", locals: { message: @message }
     .main
       .top_contents
         .edit_box
           .edit edit
       .center_contents
+        .box
+          - @messages.each do |message|
+            .total_box
+              .users_box
+                = message.user.nickname
+                %a= message.user.created_at.strftime("%Y-%m-%d %H:%M:%S")
+              %span.text #{message.text}
       .bottom_contents
         .bottom_contents_message
-          .type_a_message type a message
-        .sent_button
-          .sent_box
-            %p Send
+          =form_tag("/messages", method: :post) do
+            %input{name: "text",type:"text", placeholder: "type a message",class: "group1"}
+            %input{type: "submit", value: "Send", class: "group2"}/

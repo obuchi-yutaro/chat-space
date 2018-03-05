@@ -6,9 +6,35 @@
     width: 300px;
     height: 100vh;
     background-color: #2f3e51;
-    .user_name{
+    .user{
       background-color:#253141;
       height:96px;
+      display: flex;
+      .user_information{
+        position:relative;
+        top:35px;
+        display: flex;
+        height:25px;
+        width:260px;
+        position:relative;
+        left:20px;
+        .user_name{
+          font-size: 16px;
+          font-weight: bold;
+          color: #FFFFFF;
+          position:relative;
+          left:20px;
+        }
+        .font_awesome{
+          position:relative;
+          left: 180px;
+          color: #FFFFFF;
+          font-size: 16px;
+          a:visited {
+            color: #FFFFFF;
+          }
+        }
+      }
     }
   }
 }
