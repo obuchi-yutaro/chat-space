@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 20180303152556) do
     t.text     "text",       limit: 65535
     t.integer  "user_id"
     t.integer  "group_id"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

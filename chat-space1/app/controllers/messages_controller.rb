@@ -6,7 +6,8 @@ class MessagesController < ApplicationController
   end
 
   def create
-    Message.create
+    Message.create(message_params)
+    redirect_to action: 'index'
   end
 
   private

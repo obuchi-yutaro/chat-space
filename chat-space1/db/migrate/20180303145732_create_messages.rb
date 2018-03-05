@@ -4,7 +4,7 @@ class CreateMessages < ActiveRecord::Migration[5.0]
       t.text :text
       t.integer :user_id
       t.integer :group_id
-      t.timestamps
+      t.timestamps null: true
     end
   end
 end
