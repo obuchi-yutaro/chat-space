@@ -43,8 +43,26 @@
         width: calc(100vw - 300px);
         height: calc(100vh - 186px);
         background-color:white;
+        .box{
+          width: calc(100vw - 300px);
+          height: calc(100vh - 186px);
+          background-color:white;
+          .comment_box:first-child{
+            width: calc(100vw - 340px);
+            height:116px;
+            position:relative;
+            left:40px;
+            background-color:blue;
+          }
+          .comment_box:not(:first-child){
+            height:80px;
+            width: calc(100vw - 340px);
+            background-color:yellow;
+            position:relative;
+            left:40px;
+          }
+        }
       }
-
       .bottom_contents{
         width: calc(100vw - 300px);
         height: 90px;

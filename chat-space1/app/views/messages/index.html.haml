@@ -6,6 +6,13 @@
         .edit_box
           .edit edit
       .center_contents
+        .box
+          - @messages.each do |message|
+            .comment_box
+              = message.user.nickname
+              = message.user.created_at.strftime("%Y-%m-%d %H:%M:%S")
+              %br/
+              #{message.text}
       .bottom_contents
         .bottom_contents_message
           =form_tag("/messages", method: :post) do
