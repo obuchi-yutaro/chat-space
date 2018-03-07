@@ -2,7 +2,6 @@ class MessagesController < ApplicationController
 
   def index
     @messages = Message.includes(:user).order('id DESC')
-    # @message = Message.new
   end
 
   def create
