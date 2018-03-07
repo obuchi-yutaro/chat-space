@@ -3,10 +3,20 @@
     .user
       .user_information
         .user_name
-          = current_user.nickname
+          = current_user.name
         .font_awesome
-          = link_to edit_user_registration_path do
+          = link_to new_group_path do
             %i.fa.fa-edit
-          = link_to edit_user_registration_path do
+          = link_to edit_user_path(current_user) do
             %i.fa.fa-cog
+
+    .groups
+      .group
+        - current_user.groups.each do |group|
+          = link_to group_messages_path(group) do
+            .group_content
+              .group_name
+                = group.name
+              .group_late_message
+                = group.show_last_message
       

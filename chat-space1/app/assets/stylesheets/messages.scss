@@ -34,9 +34,12 @@
           border:solid;
           border-width: 2px;
           border-color: #38AEF0;
+          a{
+            text-decoration: none;
             .edit{
               color:#38AEF0;
             }
+          }    
         }
       }
       .center_contents{

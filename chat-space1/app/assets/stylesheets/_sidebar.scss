@@ -36,5 +36,30 @@
         }
       }
     }
+
+    .groups{
+      .group{
+        a{
+          text-decoration: none;
+          .group_content{
+            height:91px;
+            .group_name{
+              width:280px;
+              position:relative;
+              top:20px;
+              left:20px;
+              color:white;
+            }
+            .group_late_message{
+              width:280px;
+              position:relative;
+              top:15px;
+              left:20px;
+              color:white;
+            }
+          }
+        }
+      }
+    }
   }
 }
