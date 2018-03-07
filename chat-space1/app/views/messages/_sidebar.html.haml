@@ -14,8 +14,9 @@
       .group
         - current_user.groups.each do |group|
           = link_to group_messages_path(group) do
-            .group_name
-              = group.name
-            .group_late_message
-              メッセージはまだありません
+            .group_content
+              .group_name
+                = group.name
+              .group_late_message
+                = group.show_last_message
       

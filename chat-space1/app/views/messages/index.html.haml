@@ -15,6 +15,7 @@
               %span.text #{message.text}
       .bottom_contents
         .bottom_contents_message
-          =form_tag("groups//messages", method: :post) do
-            %input{name: "text",type:"text", placeholder: "type a message",class: "group1"}
-            %input{type: "submit", value: "Send", class: "group2"}/
+          .form
+            = form_for [@group, @message] do |f|
+              = f.text_field :text, class: 'group1', placeholder: 'type a message'
+              = f.submit 'Send', class: 'group2'
